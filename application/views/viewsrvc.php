@@ -14,7 +14,6 @@
 
 </head>
 <body>
-
 	<table class="table">
   <thead>
     <tr>
@@ -44,6 +43,8 @@
       <td></td>
     </tr>
   </tbody>
+  <button type="submit" class="btn btn-success">Confirm</button>
+  <button type="submit" class="btn btn-alert">Delete</button>
 </table>
 
 </body>

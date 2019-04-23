@@ -42,26 +42,26 @@
   </div>  
 </nav>
   <div class="container" style="margin-top: 80px">
-    <form>
+    <form action="<?php echo base_url().'/home/regist';?>">
     <div class="form-group">
       <label for="email">Email</label>
-      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="email">
+      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="email" name="email">
     </div>
     <div class="form-group">
       <label for="firstname">First Name</label>
-      <input type="firstname" class="form-control" id="firstname" placeholder="First Name">
+      <input type="firstname" class="form-control" id="firstname" placeholder="First Name" name="firstname">
     </div>
     <div class="form-group">
       <label for="lastname">Last Name</label>
-      <input type="lastname" class="form-control" id="lastname" placeholder="Last Name">
+      <input type="lastname" class="form-control" id="lastname" placeholder="Last Name" name="lastname">
     </div>
     <div class="form-group">
       <label for="password">Password</label>
-      <input type="password" class="form-control" id="password" placeholder="Password">
+      <input type="password" class="form-control" id="password" placeholder="Password" name="password">
     </div>
     <div class="form-group">
       <label for="address">Address</label>
-      <input type="address" class="form-control" id="address" placeholder="Address">
+      <input type="address" class="form-control" id="address" placeholder="Address" name="address">
     </div>
     <button type="submit" class="btn btn-primary">Register</button>
   </form>
