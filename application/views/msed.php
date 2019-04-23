@@ -56,7 +56,8 @@
           <img src="img/model.png" alt="">
         </div>
         <div class="d-flex justify-content-center">
-          <button type="button" class="btn-bmw" href="allmodels.html">All Models</button>
+          <button type="button" class="btn-bmw">All Models</button>
+          <a href="<?php echo base_url('home/allmodels')?>"></a>
         </div>
         <div class="row" style="margin-top: 100px">  
         <div class="col-sm-3">
@@ -103,11 +104,11 @@
           <br>
           <div class="row text-center">
             <div class="col-sm-4">
-              <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:80%" alt="Image">
+              <img src="assets/img/navstr.png" class="img-responsive" style="width:80%" alt="Image">
               <p>Test Drive</p>
             </div>
             <div class="col-sm-4"> 
-              <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:80%" alt="Image">
+              <img src="assets/img/navloc.png" class="img-responsive" style="width:80%" alt="Image">
               <p>Find A Retailer</p>    
             </div>
             <div class="col-sm-4"> 
@@ -172,7 +173,8 @@
               <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:80%" alt="Image">
               <p>Current Project</p>
             </div>
-            <div class="col-sm-4">                 <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:80%" alt="Image">
+            <div class="col-sm-4">                
+              <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:80%" alt="Image">
               <p>Project 2</p>    
             </div>
             <div class="col-sm-4"> 

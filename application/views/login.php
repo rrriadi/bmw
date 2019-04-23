@@ -44,7 +44,7 @@
 
 	<h2 style="margin-top: 25px">Login</h2>
 
-  <div class="container">
+  <div class="container" style="max-width: 350px; margin-top: 50px">
   	<form>
     <div class="form-group">
       <label for="email">Email</label>
