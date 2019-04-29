@@ -42,13 +42,12 @@
   </div>  
 </nav>
 
-	<h2 style="margin-top: 25px">Login</h2>
-
   <div class="container" style="max-width: 350px; margin-top: 50px">
+    <h2 style="margin-top: 120px">Login</h2>
   	<form>
     <div class="form-group">
       <label for="email">Email</label>
-      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="email">
+      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
       <small id="emailHelp" class="form-text text-muted" >Don't have an account? <a href="<?php echo site_url('home/register');?>">Register here.</a></small>
       
       

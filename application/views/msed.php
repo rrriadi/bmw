@@ -104,11 +104,11 @@
           <br>
           <div class="row text-center">
             <div class="col-sm-4">
-              <img src="assets/img/navstr.png" class="img-responsive" style="width:80%" alt="Image">
+              <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:80%" alt="Image">
               <p>Test Drive</p>
             </div>
             <div class="col-sm-4"> 
-              <img src="assets/img/navloc.png" class="img-responsive" style="width:80%" alt="Image">
+              <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:80%" alt="Image">
               <p>Find A Retailer</p>    
             </div>
             <div class="col-sm-4"> 
@@ -121,21 +121,19 @@
 
     <!--Tab Services-->
       <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-        <div style="margin-top:100px">
-          <h3>Choose Service</h3>
+        <div style="margin-top:100px; alignment-baseline: central;" >
+          <h3>Services and Maintenance</h3>
           <br>
           <div class="row text-center">
             <div class="col-sm-4">
               <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:80%" alt="Image">
-              <p>Spare Parts</p>
+              <br>
+              <a href="home/serviceform" class="btn-bmw" role="button">Make an Appointment</a>
             </div>
-            <div class="col-sm-4"> 
+            <div class="col-sm-4">
               <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:80%" alt="Image">
-              <p>Maintenance</p>    
-            </div>
-            <div class="col-sm-4"> 
-              <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:80%" alt="Image">
-              <p>Modifications</p>    
+              <br>
+              <a href="home/viewsrvc" class="btn-bmw" role="button">View Your Appointments</a>
             </div>
           </div>
         </div>

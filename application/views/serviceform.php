@@ -41,19 +41,28 @@
   </div>  
 </nav>
 
-	<h2 style="margin-top: 25px">Maintenance Form</h2>
+	<h2 style="margin-top: 25px">Service Form</h2>
 
 	<form>
   <div class="form-group">
     <label for="carmodel">Car Model</label>
     <input type="carmodel" class="form-control" id="carmodel" placeholder="Enter Your Car Model">
   </div>
+  <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Type
+    <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Service</a></li>
+    <li><a href="#">Maintenance</a></li>
+    <li><a href="#">Modifications</a></li>
+  </ul>
+</div>
   <div class="form-group">
     <label for="regnum">Registration Number</label>
     <input type="regnum" class="form-control" id="regnum" placeholder="Car Registration Number">
   </div>
   <div class="form-group">
-    <label for="complaint">Complaint</label>
+    <label for="complaint">Inquiry</label>
     <textarea class="form-control" id="complaint" rows="5">
     </textarea>
   </div>

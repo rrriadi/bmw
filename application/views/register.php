@@ -15,15 +15,18 @@
 
 	<div class="container" id="tabs">
  <nav class="navbar container fixed-top navbar-expand-sm bg-transparent border-bottom">
-  	<a class="navbar-brand order-md-last" href="home.html">
-  		<img src="img/logo2.png" alt="" width="90px" height="98px">
-  	</a>
-  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-  	<span class="navbar-toggler-icon"></span>
-  	</button>
-	<div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <a class="navbar-brand order-md-last" href="home.html">
+      <img src="img/logo2.png" alt="" width="90px" height="98px">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav font-weight-bold">
-      	<li class="nav-item">
+      <li class="nav-item">
+          <a class="nav-link text-dark" href="<?php echo site_url('home');?>">Home</a>
+        </li> 
+        <li class="nav-item">
           <a class="nav-link text-dark" href="<?php echo base_url('home/msed')?>">Models</a>
         </li>
         <li class="nav-item">
@@ -35,17 +38,15 @@
         <li class="nav-item">
           <a class="nav-link text-dark" href="<?php echo site_url('home/msed');?>">Discover</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-dark" href="home/login">Login</a>
-        </li>   
     </ul>
   </div>  
 </nav>
-  <div class="container" style="margin-top: 80px">
+  <div class="container" style="max-width: 350px; margin-top: 120px">
+    <h2 style="margin-top: 25px">Register</h2>
     <form action="<?php echo base_url().'/home/regist';?>">
     <div class="form-group">
       <label for="email">Email</label>
-      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="email" name="email">
+      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email" name="email">
     </div>
     <div class="form-group">
       <label for="firstname">First Name</label>
