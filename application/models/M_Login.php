@@ -2,24 +2,27 @@
 
 class M_Login extends CI_Model
 {
-  public function login($email, $password){
-    $this->db->where('email',$email);
-    $this->db->where('password',$password);
-
-    $result = $this->db->get('user');
-    if($result->num_rows()==1){
-        return $result->row(0);
-    }else{
-        return false;
-    }
+  $this->db->where($email);
+        $this->db->where($password);
+    $this->db->select('*');
+    $query = $this->db->get('user');
+        if ($query->num_rows() == 0) {
+            return FALSE;
+        } else {
+            $loginData = $query->result();
+            foreach ($loginData as $data) {
+                $session_data = array(
+                    'email' => $data->email,
+                    'password' => $data->password
+                );
+                $this->session->set_userdata($session_data);
+            }
+            return TRUE;
+        }
   }
 
-  public function register_user($table,$data){
-    $insert = $this->db->insert($table, $data);
-    if ($insert){
-      return TRUE;
-    }else{
-      return FALSE;
+  function register($data)
+    {
+        return $this->db->insert('user', $data);
     }
-  }
 }

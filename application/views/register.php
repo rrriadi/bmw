@@ -43,7 +43,7 @@
 </nav>
   <div class="container" style="max-width: 350px; margin-top: 120px">
     <h2 style="margin-top: 25px">Register</h2>
-    <form action="<?php echo base_url().'/home/regist';?>">
+    <form method="post" action="<?php echo site_url('home/registerprocess');?>">
     <div class="form-group">
       <label for="email">Email</label>
       <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email" name="email">

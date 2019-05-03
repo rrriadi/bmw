@@ -7,6 +7,10 @@ class home extends CI_Controller {
 	{
 		parent::__construct();
 
+    $this->load->model('M_Login');
+    $this->load->model('M_Regist');
+    $this->load->model('M_Service');
+
 
 	}
 
@@ -24,6 +28,27 @@ class home extends CI_Controller {
 	{
 		$this->load->view("login");
 	}
+
+  public function loginform()
+    {
+        $email = $this->input->post("email");
+        $password = $this->input->post('password');
+    $checking = $this->user->login(array('email' => $email), array('password' => $password));
+
+    if ($checking != FALSE) {
+      $this->load->view('content/home');
+            
+        } else 
+        {
+            $data['error'] = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                  <strong>Error!</strong><br>
+                                  Your username or password is invalid!
+                </div>';
+        }
+      }
 
 	public function msed()
 	{
@@ -50,31 +75,20 @@ class home extends CI_Controller {
     	}
   	}
 
-  	public function regist()
-  {
-    $this->load->model('M_Login');
-    $address = $this->input->post('address');
-    $password = $this->input->post('password');
-    $email = $this->input->post('email');
-    $firstname = $this->input->post('firstname');
-    $lastname = $this->input->post('lastname');
-    $table = 'user';
+  	public function registerprocess()
+    {
+       $data = 
+       [
+        'address' => $this->input->post('address'),
+        'email' => $this->input->post('email'),
+        'firstname' => $this->input->post('firstname'),
+        'lastname' => $this->input->post('lastname'),
+        'password' => $this->input->post('password'),
+       ];
+       $this->user->insert($data);
+       redirect('login');
 
-    $data_insert = array (
-      'email' => $email,
-      'firstname' => $firstname,
-      'lastname' => $lastname,
-      'password' => $password,
-      'address' => $address,
-    );
-
-    $register = $this->M_Login->register_user($table, $data_insert);
-
-    if ($register) {
-      $this->session->set_flashdata('alert', 'registrasi_berhasil');
-      redirect('home');
-    }
-  }
+       }
 
   public function Logout()
   {
